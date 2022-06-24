@@ -1,0 +1,37 @@
+.button-shain {
+  position: relative;
+  background: #656682;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 15px 0 15px 0;
+  border: none;
+  transition: 0.5s;
+  overflow: hidden;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5), 0 -2px 5px rgba(255, 255, 255, 0.912), inset 0 3px 5px rgba(0, 0, 0, 0.5),
+    inset 0 -2px 5px rgba(255, 255, 255, 0.912);
+
+  &:hover {
+    background: #d2690b;
+    transform: scale(1.2);
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #ffffff71, transparent);
+    transform: translateX(-100%) skew(-20deg);
+    transition: transform 0.5s;
+  }
+
+  &:hover::before {
+    transform: translateX(150%);
+    transition-delay: 0.3s;
+  }
+}
